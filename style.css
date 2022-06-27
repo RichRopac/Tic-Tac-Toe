@@ -1,0 +1,150 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;   
+}
+
+h1{
+    color: goldenrod;
+    font-size: 6em;
+}
+
+h2{
+    color: green;
+    font-size: 1.5em;
+}
+
+#board {
+    margin-top: 0%;
+    display: grid;
+    grid-template-rows: 160px 160px 160px;    
+    grid-template-columns: 160px 160px 160px;
+    cursor: pointer;
+    position: relative;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em; 
+    color: goldenrod;
+}
+
+.topBorder{
+    border-top: .2em solid goldenrod;  
+}
+
+.rightBorder{
+    border-right: .2em solid goldenrod;  
+}
+
+ .winLine{
+    position: absolute;
+    background-color: green;   
+} 
+
+.winLineRow1{
+    width: 100%; 
+    height: 3px;
+    top: 16%;
+}
+
+.winLineRow2{
+    width: 100%; 
+    height: 3px;
+    top: 51%;
+    
+}
+
+.winLineRow3{
+    width: 100%; 
+    height: 3px;
+    top: 85%;
+    
+}
+
+.winLineCol1{
+    height: 100%;
+    width: 3px;
+    left: 14%;
+    
+}
+
+.winLineCol2{
+    height: 100%;
+    width: 3px;
+    left: 47%;
+    
+}
+
+.winLineCol3{
+    height: 100%;
+    width: 3px;
+    left: 83%;
+  
+}
+
+.winLineDiagForward{
+    width: 90%;
+    height: 3px;
+    top: 52%;
+    left: 5%;
+    transform: skewY(45deg);
+    
+}
+
+.winLineDiagBack{
+    width: 90%;
+    height: 3px;
+    top: 52%;
+    left: 5%;
+    transform: skewY(-45deg);
+}
+
+#players{
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+    width: 100%;
+    font-size: 30px;
+    color: green
+}
+
+#gameOver{
+    margin-top: 5%;
+    width: 60%;
+    text-align: center;
+    border: orange 6px solid;
+    padding: 30px;
+    font-size: 1.5em;
+}
+
+button {
+    margin-right: 2%;
+    background-color: blue;
+    border: green 1px solid;
+    color: aquamarine;
+    padding: 15px;
+    font-size: 1em;
+}
+
+.hoverButtonX:hover::after {
+    content: "X";
+    color: goldenrod;
+}
+
+.hoverButtonO:hover::after {
+    content: "O";
+    color: goldenrod;
+}    
+
+.hide{
+   display: none;
+}
+
+.show{
+    display: block;
+}
